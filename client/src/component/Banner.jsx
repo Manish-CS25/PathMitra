@@ -7,7 +7,7 @@ function Banner() {
             <div className="max-w-screen-2xl container mx-auto md:px-20 px-4 flex flex-col md:flex-row">
                 <div className='w-full order-2 md:order-2 md:w-1/2 mt-12 md:mt-32'>
                     <div className='space-y-12'>
-                        <h1 className='text-4xl font-bold'>Hello, Welcome here to seek Guidance to Achieve <span className='text-pink-500'>Your Goal !!</span> </h1>
+                        <h1 className='text-4xl font-bold'>Hello, Welcome here to seek Guidance to Achieve <span className='text-pink-400'>Your Goal !!</span> </h1>
                         <p className='text-xl'>Our guidance platform is a welcoming space for individuals seeking to achieve their goals. We offer a wide range of resources, from expert advice to practical tools. Our supportive community and engaging environment make it easy to find the guidance you need to succeed.</p>
                         <label className="input input-bordered flex items-center gap-2">
                         <svg
@@ -23,7 +23,7 @@ function Banner() {
                         <input type="text" className="grow" placeholder="Email" />
                     </label>
                     </div>
-                    <button className="btn btn-secondary mt-3">Secondary</button>
+                    <button className="btn btn-neutral mt-3">Secondary</button>
 
 
                 </div>

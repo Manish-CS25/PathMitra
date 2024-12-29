@@ -5,24 +5,24 @@ import { useState, useEffect } from "react";
 import Cards from "./Cards";
 import { Link } from "react-router-dom";
 
-function course() {
+function Mentors() {
 
-  const [book , setBook] = useState([])
+  const [mentor , setMentor] = useState([])
   useEffect(() => {
-    const getBook = async () => { 
+    const getMentors = async () => { 
       try {
-        const res = await axios.get("http://localhost:3001/books");
+        const res = await axios.get("http://localhost:3003/mentors");
         // console.log(res.data);
-        setBook(res.data);
+        setMentor(res.data);
       } catch (error) { 
         console.log(error);
       } 
     }
-    getBook();
+    getMentors();
   } , []) 
   return (
     <>
-      <div className="max-w-screen-2xl container mx-auto md:px-20 px-4">
+      <div className="max-w-screen-2xl container mx-auto md:px-20 px-4 mt-16">
         <div className="mt-28 items-center justify-center text-center ">
           <h1 className="text-2xl md:text-4xl">
             Welcome! Start Your Career Journey{" "}
@@ -39,7 +39,7 @@ function course() {
  
           <div className="mt-12 grid grid-cols-1 md:grid-cols-4">
             {
-              book.map((item) => (
+              mentor.map((item) => (
                 <Cards item={item} key={item.id} />
               ))
             }
@@ -51,4 +51,4 @@ function course() {
   );
 }
 
-export default course;
+export default Mentors;

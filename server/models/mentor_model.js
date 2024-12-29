@@ -1,15 +1,15 @@
 import mongoose from "mongoose";
 
-const BookSchema = mongoose.Schema({
+const MentorSchema = mongoose.Schema({
     name: {
         type: String,
         required: true,
     },
-    title: {
+    post: {
         type: String,
         required: true,
     },
-    price: {
+    fees: {
         type: Number,
         required: true,
     },
@@ -25,6 +25,6 @@ const BookSchema = mongoose.Schema({
 
 });
 
-const Book = mongoose.model('Book', BookSchema);
+const Mentor = mongoose.model('Mentor', MentorSchema);
 
-export default Book;
+export default Mentor;

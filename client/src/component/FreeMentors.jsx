@@ -8,19 +8,19 @@ import { useState, useEffect } from 'react';
 
 import Slider from "react-slick";
 
-function Freebook() {
-  const [book , setBook] = useState([])
+function FreeMentor() {
+  const [Mentor , setMentor] = useState([])
   useEffect(() => {
-    const getBook = async () => { 
+    const getMentor = async () => { 
       try {
-        const res = await axios.get("http://localhost:3001/books");
+        const res = await axios.get("http://localhost:3003/mentors");
         // console.log(res.data);
-        setBook(res.data.filter((item) => item.price === 0));
+        setMentor(res.data.filter((item) => item.fees === 0));
       } catch (error) { 
         console.log(error);
       } 
     }
-    getBook();
+    getMentor();
   } , []) 
   var settings = {
     dots: true,
@@ -66,7 +66,7 @@ function Freebook() {
 
       
       <div>      <Slider {...settings}>
-        {book.map((item) => (
+        {Mentor.map((item) => (
           <Cards item={item} key={item.id}/>
         ))}
       </Slider></div>
@@ -80,4 +80,4 @@ function Freebook() {
   )
 }
 
-export default Freebook
+export default FreeMentor

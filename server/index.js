@@ -2,7 +2,7 @@ import express from 'express'
 import dotenv from 'dotenv' 
 import mongoose from 'mongoose' 
 const app = express()
-import bookRoutes from './routes/book_routes.js'
+import mentor_routes from './routes/mentor_routes.js' 
 import cors from 'cors'
 
 dotenv.config()
@@ -25,7 +25,7 @@ try {
  
 app.use(cors())
 
-app.use('/books', bookRoutes)
+app.use('/mentors', mentor_routes)
 
 
 app.get('/', (req, res) => {

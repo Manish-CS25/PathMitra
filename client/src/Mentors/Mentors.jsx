@@ -1,13 +1,13 @@
 import React from 'react'
 import Navbar from '../component/Navbar'
 import Footer from '../component/Footer'
-import Course from '../component/course'
+import Mentors from '../component/mentor'
 
-function Courses() {
+function Mentors_list() {
   return (
 <>
 <Navbar />
-<Course />
+<Mentors />
 <Footer />
 
 
@@ -17,4 +17,4 @@ function Courses() {
   )
 }
 
-export default Courses
+export default Mentors_list

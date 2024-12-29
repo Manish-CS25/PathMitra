@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import Login from './Login';
+import About from './About/About';
 
 function Navbar() {
   const [theme, setTheme] = useState(localStorage.getItem('theme') ? localStorage.getItem('theme') : 'light');
@@ -36,9 +37,9 @@ function Navbar() {
   const navItems = (
     <>
       <li><a href='/'>Home</a></li>
-      <li><a href='courses'>Mentors</a></li>
-      <li><a>Contact</a></li>
-      <li><a>About</a></li>
+      <li><a href='mentors'>Mentors</a></li>
+      <li><a >Contact</a></li>
+      <li><a href='about'>About</a></li>
     </>
   );
 
@@ -122,7 +123,7 @@ function Navbar() {
           </div>
         </div>
       </div>
-      <hr />
+      {/* <hr /> */}
     </div>
   );
 }
